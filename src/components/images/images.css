@@ -1,0 +1,150 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.imgContainer {
+    margin: 20px 40px;
+    padding: 10px 150px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pokeStats {
+    height: fit-content;
+
+    margin-top: 20px;
+    padding: 15px;
+    padding-left: 20px;
+
+    width: max-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+                -5px -5px 10px rgba(255, 255, 255, 0.6),
+                inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.6);
+}
+
+.pokeTypeContainer {
+    margin-top: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pokeImg {
+    width: 500px;
+    height: 500px;
+
+    padding: 15px;
+
+    border: 15px solid white;
+    border-bottom: 45px solid white;
+    border-radius: 15px;
+
+    box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.5s ease-in-out;
+}
+
+.pokeImg:hover {
+    transform: perspective(2500px) rotateX(20deg) rotateY(-15deg) rotateZ(5deg) scale(1.1);
+
+    box-shadow: 10px 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.pokeName {
+    font-size: 36px;
+    color: rgb(51,103,176);
+    letter-spacing: 1px;
+    
+    display: flex;
+    align-items: flex-start;
+}
+
+.pokeType {
+    display: inline-block;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+
+    font-size: 30px;
+
+    border-radius: 10px;
+}
+
+.grass {
+    background-color: rgb(129, 207, 3);
+}
+
+.electric {
+    background-color: rgb(255, 238, 0);
+}
+
+.fire {
+    background-color: orange;
+}
+
+.water {
+    background-color: skyblue;
+}
+
+.rock {
+    background-color: chocolate;
+}
+
+.steel {
+    background-color: slategray;
+}
+
+.psychic {
+    background-color: pink;
+}
+
+.poison {
+    background-color: rgb(185, 85, 185);
+}
+
+.flying {
+    background-color: powderblue;
+}
+
+.pokeType::first-letter, .pokeStatName {
+    text-transform: capitalize;
+}
+
+.pokeBaseStatsContainer {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .imgContainer {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .pokeImg:hover {
+        transform: perspective(2500px) rotateX(20deg) rotateY(-15deg) rotateZ(5deg) scale(0.9);
+    }
+}

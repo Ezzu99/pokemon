@@ -1,0 +1,96 @@
+.pokemon {
+    width: 350px;
+
+    margin-top: 20px;
+    
+    position: relative;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.pokeSearch {
+    margin-right: 10px;
+    padding: 10px;
+
+    width: 200px;
+
+    font-size: 20px;
+    text-align: center;
+    color: rgb(51,103,176);
+
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+
+    background-color: rgb(238, 238, 238);
+
+    transition: 0.5s ease-in-out;
+}
+
+.pokeSearch:hover {
+    border-bottom: 3px solid rgb(51,103,176);
+    caret-color: transparent;
+}
+
+.pokeSearch:focus {
+    caret-color: rgba(0, 0, 255, 0);
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    from {
+        border-bottom: 3px solid rgb(51,103,176);
+    }
+    to {
+        border-bottom: 3px solid rgb(166,166,166);
+    }
+}
+
+.pokeMoveHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokeTotalMoves {
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.moveSets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    margin-bottom: 40px;
+}
+
+.moveNames {
+    width: 400px;
+    font-size: 30px;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+}
